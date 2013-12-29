@@ -30,7 +30,7 @@ void MainWindow::on_bpfolder_clicked()
 {
     QDir* directory;
     directory = new QDir();
-    QString path = QFileDialog::getExistingDirectory (this, tr("Directory"), directory->path());
+    QString path = QFileDialog::getExistingDirectory (this, tr("Directory"), "");
     directory->setPath(path);
     this->ui->linedossiervcard->setText(directory->path());
     this->leCtrl->setPathFolder(directory);
